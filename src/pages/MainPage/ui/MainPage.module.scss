@@ -1,0 +1,10 @@
+.pageWrapper {
+  padding: 25px 24px;
+}
+
+.pageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 400px;
+}

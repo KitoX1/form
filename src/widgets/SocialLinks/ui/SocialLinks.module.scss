@@ -1,0 +1,57 @@
+.socialLinksWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline var(--dark-accent-color);
+  }
+
+  &:focus {
+    color: var(--dark-accent-color);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+//TODO: fix problem with import assets for bg-image
+
+// .socialLinks::before {
+//   content: '';
+
+//   display: block;
+
+//   width: 13px;
+//   height: 12px;
+
+//   color: var(--main-color);
+
+//   background-image: url('../../../shared/assets/icons/file-icon.svg');
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+.socialLinksWrapper.socialLinksMenu {
+  flex-direction: column;
+}
+
+.linkWrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+
+  color: var(--main-color);
+}

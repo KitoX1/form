@@ -1,0 +1,64 @@
+{
+  "domains": {
+  },
+  "enums": {
+    "feedback_messages": {
+      "error": "Ошибка",
+      "success": "Форма успешно отправлена"
+    },
+    "labels": {
+      "about": "О себе",
+      "advantages": "Преимущества",
+      "checkbox": "Checkbox group",
+      "email": "Электронная почта",
+      "name": "Имя",
+      "nickname": "Никнейм",
+      "number_phone": "Номер телефона",
+      "radio": "Radio group",
+      "sex": "Пол",
+      "surname": "Фамилия"
+    },
+    "links": {
+      "to_main": "На главную",
+      "start": "Начать",
+      "resume": "Резюме"
+    },
+    "notes": {
+      "tip": "Заметка"
+    },
+    "people": {
+      "man": "муж",
+      "woman": "жен"
+    },
+    "names": {
+      "fullname": "Требко Никита"
+    }
+  },
+  "general_actions": {
+    "add": "Добавить",
+    "back": "Назад",
+    "close": "Закрыть",
+    "delete": "Удалить",
+    "next": "Далее",
+    "open": "Открыть",
+    "submit": "Отправить",
+    "submitting": "Отправляется",
+    "toggle": "Переключить"
+  },
+  "general_alts": {
+    "user_avatar": "Фото пользователя"
+  },
+  "general_errors": {
+    "not_found_page": "Страница не найдена",
+    "invalid_email": "Неправильный формат эл.почты",
+    "invalid_name": "Должно быть 50 знаков или меньше, только буквы",
+    "invalid_nickname": "Должно быть 30 знаков или меньше, только буквы и цифры",
+    "invalid_phone_number": "Добавьте корректный номер телефона",
+    "invalid_textaria": "Должно быть 200 знаков или меньше"
+  },
+  "general_placeholders": {
+    "no_options": "Вариантов нет",
+    "not_chosen": "Не выбрано",
+    "enter_text": "Введите текст"
+  }
+}

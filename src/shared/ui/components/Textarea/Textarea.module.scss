@@ -1,0 +1,52 @@
+@import '../../../../app/styles/variables/mixins';
+
+.field {
+  @include field;
+
+  min-width: 230px;
+  max-width: 680px;
+  min-height: 60px;
+  max-height: 175px;
+
+  &--secondary {
+    background: var(--bg-color-variants);
+  }
+
+  @media screen and (width <= 870px) {
+    max-width: 610px;
+  }
+
+  @media screen and (width <= 740px) {
+    max-width: 524px;
+  }
+
+  @media screen and (width <= 640px) {
+    max-width: 424px;
+  }
+
+  @media screen and (width <= 540px) {
+    max-width: 324px;
+  }
+
+  @media screen and (width <= 440px) {
+    max-width: 300px;
+  }
+}
+
+
+.error {
+  border-color: var(--error);
+}
+
+.counter {
+  position: absolute;
+  top: 95px;
+  right: 10px;
+
+  font-size: 12px;
+  color: var(--pimary-color-light);
+}
+
+.counter.counterError {
+  color: var(--error);
+}
