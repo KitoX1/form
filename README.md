@@ -1,5 +1,9 @@
 # Form
 
+### Архитектурная методогия
+
+[Feature-Sliced Design](https://feature-sliced.design/ru/)
+
 ### Использованный стек
 
 - React
