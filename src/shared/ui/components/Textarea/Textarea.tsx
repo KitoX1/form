@@ -30,12 +30,11 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
             setTextLength(evt.target.value.trim().length)
           }
         />
+
         <span
           className={classNames(
             cls.counter,
-            {
-              [cls.counterError]: textLength > 200
-            },
+            { [cls.counterError]: textLength > 200 },
             []
           )}
         >{`${textLength}/200`}</span>

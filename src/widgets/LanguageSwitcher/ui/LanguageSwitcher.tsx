@@ -19,6 +19,7 @@ export const LanguageSwitcher = () => {
       }}
     >
       <MdLanguage />
+      
       <p>{upperFirst(language)}</p>
     </Button>
   );

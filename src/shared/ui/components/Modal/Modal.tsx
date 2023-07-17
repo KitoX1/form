@@ -38,8 +38,10 @@ export const Modal = ({
         )}
       >
         <h2 className={cls.title}>{title}</h2>
+
         {isErrorModal && <CloseButton onClose={onClose} />}
       </header>
+      
       <div className={cls.mainContent}>
         <div
           className={classNames(

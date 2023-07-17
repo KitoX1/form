@@ -10,10 +10,7 @@ import cls from './ContactInfo.module.scss';
 import { type ContactsInfoFormValues } from './ContactInfo.schema';
 
 export const ContactInfo = () => {
-  const {
-    register,
-    formState: { errors }
-  } = useFormContext<ContactsInfoFormValues>();
+  const { register, formState: { errors } } = useFormContext<ContactsInfoFormValues>();
 
   const [t] = useTranslation();
 
@@ -34,6 +31,7 @@ export const ContactInfo = () => {
           isDisabled
         />
       </FormControl>
+      
       <FormControl
         id="field-email"
         label={t('enums:labels.email')}

@@ -25,6 +25,7 @@ export const RadioButton = React.forwardRef<HTMLInputElement, RadioButtonProps>(
         checked={isChecked}
         onChange={(evt) => onChange(evt)}
       />
+
       <span
         className={classNames(
           cls.radioButton,
@@ -33,6 +34,7 @@ export const RadioButton = React.forwardRef<HTMLInputElement, RadioButtonProps>(
         )}
         aria-hidden="true"
       />
+      
       {description}
     </label>
   )

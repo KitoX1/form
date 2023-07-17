@@ -7,10 +7,7 @@ import { ReactComponent as FileIcon } from 'shared/assets/icons/file-icon.svg';
 
 import cls from './SocialLinks.module.scss';
 
-export const SocialLinks = ({
-  socialLinks,
-  className = ''
-}: {
+export const SocialLinks = ({ socialLinks, className = '' }: {
   socialLinks: SocialLinksType;
   className?: string;
 }) => {
@@ -24,6 +21,7 @@ export const SocialLinks = ({
           className={cls.linkWrapper}
         >
           <FileIcon />
+          
           <a
             className={cls.socialLinks}
             href={socialLinks[link]}

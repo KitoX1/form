@@ -22,7 +22,9 @@ export const MainPageHeader = ({ onOpenMenu }: MainPageHeaderProps) => {
   return (
     <div className={cls.pageHeader}>
       <UserProfile userData={UserData} />
+      
       {isScreenSm && <SwitchersBar />}
+
       <Button
         id="button-open"
         element={TypeElement.BUTTON}

@@ -19,9 +19,7 @@ export const AdvantagesField = ({ index, onRemove }: AdvantagesFieldProps) => {
   const [t] = useTranslation();
 
   const { register } = useFormContext();
-  const {
-    formState: { errors }
-  } = useController<AdvantagesInfoFormValues, `advantages.${number}.advantage`>(
+  const { formState: { errors } } = useController<AdvantagesInfoFormValues, `advantages.${number}.advantage`>(
     {
       name: `advantages.${index}.advantage`
     }
@@ -48,10 +46,9 @@ export const AdvantagesField = ({ index, onRemove }: AdvantagesFieldProps) => {
           placeholder={t('general_placeholders:enter_text')}
         />
       </FormControl>
+
       <div
-        style={{
-          marginTop: index === 0 ? '36px' : '16px'
-        }}
+        style={{ marginTop: index === 0 ? '36px' : '16px' }}
       >
         <Button
           id={`button-remove-${index + 1}`}

@@ -23,6 +23,7 @@ export const RadioGroup = () => {
   return (
     <div className={cls.checkboxGroup}>
       <span>{t('enums:labels.radio')}</span>
+      
       {Object.values(checkboxDescriptions).map(
         (description: string | null, index) => (
           <RadioButton

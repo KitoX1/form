@@ -15,6 +15,7 @@ interface MenuProps {
 export const Menu = ({ onClose, children, isOpened }: MenuProps) => (
   <div className={classNames(cls.menu, { [cls.menuOpened]: isOpened }, [])}>
     <CloseButton onClose={onClose} />
+    
     <div className={cls.menuWrapper}>{children}</div>
   </div>
 );

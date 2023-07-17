@@ -14,15 +14,14 @@ export const Avatar = ({ src, className = '', initials }: AvatarProps) => {
 
   return (
     <div className={cls.avatarWrapper}>
-      {src ? (
-        <img
-          className={classNames(cls.avatarImg, {}, [cls[className]])}
-          src={src}
-          alt={t('general_alts:user_avatar')}
-        />
-      ) : (
-        <div className={cls.defaultAvatar}>{initials}</div>
-      )}
+      {src 
+        ? <img
+            className={classNames(cls.avatarImg, {}, [cls[className]])}
+            src={src}
+            alt={t('general_alts:user_avatar')}
+          />
+        : <div className={cls.defaultAvatar}>{initials}</div>
+      }
     </div>
   );
 };

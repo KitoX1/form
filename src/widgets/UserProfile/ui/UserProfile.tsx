@@ -19,8 +19,10 @@ export const UserProfile = ({ userData }: { userData: UserDataType }) => {
         src={avatar || ''}
         initials={firstLetters(translatedFullname).toUpperCase()}
       />
+
       <div className={cls.userInfoWrapper}>
         <h2 className={cls.userName}>{translatedFullname}</h2>
+        
         <div className={cls.socialLinksBox}>
           <SocialLinks socialLinks={socialLinks} />
         </div>
