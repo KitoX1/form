@@ -26,13 +26,14 @@ export const FormControl = ({
     className={classNames(cls.fieldset, {}, [className])}
     {...otherProps}
   >
-    {label != null && <label htmlFor={id}>{label}</label>}
+    {label && <label htmlFor={id}>{label}</label>}
 
     {children}
 
-    {helperText && !errorMessage ? (
+    {Boolean(helperText && !errorMessage) && 
       <span className={cls.helperText}>{helperText}</span>
-    ) : null}
-    {errorMessage ? <span className={cls.error}>{errorMessage}</span> : null}
+    }
+
+    {errorMessage && <span className={cls.error}>{errorMessage}</span>}
   </div>
 );

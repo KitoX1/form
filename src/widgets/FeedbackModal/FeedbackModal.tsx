@@ -12,6 +12,7 @@ import { TypeElement, ThemeButton } from 'shared/ui/constants/constants';
 export const FeedbackModal = () => {
   const dispatch = useAppDispatch();
   const type = useAppSelector(selectModalType);
+  
   const navigate = useNavigate();
   const [t] = useTranslation();
 

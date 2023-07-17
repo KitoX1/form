@@ -23,6 +23,7 @@ export const CheckboxGroup = () => {
   return (
     <div className={cls.checkboxGroup}>
       <span>{t('enums:labels.checkbox')}</span>
+      
       {Object.values(checkboxDescriptions).map(
         (description: string | null, index) => (
           <Checkbox

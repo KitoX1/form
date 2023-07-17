@@ -24,6 +24,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         type="checkbox"
         onChange={(evt) => onChange(evt)}
       />
+
       <span
         className={classNames(
           cls.checkbox,
@@ -32,6 +33,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         )}
         aria-hidden="true"
       />
+      
       {description}
     </label>
   )

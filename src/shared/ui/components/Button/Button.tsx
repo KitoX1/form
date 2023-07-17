@@ -12,6 +12,7 @@ type ContainerElement = HTMLButtonElement | HTMLAnchorElement;
 interface ButtonProps {
   id?: string;
   className?: string;
+  children?: React.ReactNode,
   element: string;
   link?: string;
   theme?: ThemeButton;

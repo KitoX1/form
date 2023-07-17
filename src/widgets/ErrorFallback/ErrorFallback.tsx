@@ -1,12 +1,10 @@
-export const ErrorFallback = ({
-  componentStack,
-  error
-}: {
+export const ErrorFallback = ({ componentStack, error }: {
   error: Error;
   componentStack: string | null;
 }) => (
   <div>
     <h1>{error.message || 'Application error'}</h1>
+
     <span>
       {componentStack != null ||
         'Oops, something went wrong. Please, contact developers'}

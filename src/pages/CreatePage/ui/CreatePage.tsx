@@ -9,20 +9,14 @@ import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from 'app/hooks';
 import { useAdapter } from 'app/hooks/useAdapter';
 import { usePostFormDataMutation } from 'app/store/api';
-import {
-  resetFormInfo,
-  setFormInfo
-} from 'app/store/slices/formSlice/formSlice';
+import { resetFormInfo,setFormInfo } from 'app/store/slices/formSlice/formSlice';
 import { selectFormInfo } from 'app/store/slices/formSlice/selectors';
 import { showModal } from 'app/store/slices/modalSlice/modalSlice';
 import { type FormFieldsData } from 'app/types/redux';
 import { TypeModal } from 'constants/constants';
 import { AboutInfo } from 'features/AboutInfo';
 import { AdvantagesInfo } from 'features/AdvantagesInfo';
-import {
-  type ChangedFormInfoValues,
-  FormDataValidationShema
-} from 'features/common.shema';
+import { type ChangedFormInfoValues, FormDataValidationShema } from 'features/common.shema';
 import { GeneralInfo } from 'features/GeneralInfo';
 import { Steps } from 'pages/constans';
 import { getInitialFormState } from 'pages/utils';
@@ -90,6 +84,24 @@ export const CreatePage = () => {
     }
   };
 
+  const handleSubmit = methods.handleSubmit((data) => {
+    const initialValues = getInitialFormState(formData);
+    const updatedForm = (
+      Object.keys(data) as (keyof typeof data)[]
+    ).reduce<ChangedFormInfoValues>((acc, key) => {
+      const currentValue = data[key];
+      const initialValue = initialValues[key];
+
+      if (!isEqual(currentValue, initialValue)) {
+        (acc[key] as typeof currentValue) = currentValue;
+      }
+
+      return acc;
+    }, {});
+
+    return handleButtonNextClick({ ...formData, ...updatedForm });
+  });
+
   const getSubmitBtnText = () =>
     isLoading ? t('general_actions:submitting') : t('general_actions:submit');
 
@@ -115,34 +127,20 @@ export const CreatePage = () => {
         >
           {t('general_actions:back')}
         </Button>
+
         <Button
           id="button-next"
           element={TypeElement.BUTTON}
           theme={ThemeButton.PRIMARY}
           isDisabled={isLoading}
-          onClick={methods.handleSubmit((data) => {
-            const initialValues = getInitialFormState(formData);
-            const updatedForm = (
-              Object.keys(data) as (keyof typeof data)[]
-            ).reduce<ChangedFormInfoValues>((acc, key) => {
-              const currentValue = data[key];
-              const initialValue = initialValues[key];
-
-              if (!isEqual(currentValue, initialValue)) {
-                (acc[key] as typeof currentValue) = currentValue;
-              }
-
-              return acc;
-            }, {});
-
-            return handleButtonNextClick({ ...formData, ...updatedForm });
-          })}
+          onClick={handleSubmit}
         >
           {currentStep === Steps.StepThree
             ? getSubmitBtnText()
             : t('general_actions:next')}
         </Button>
       </div>
+      
       <SwitchersBar />
     </div>
   );

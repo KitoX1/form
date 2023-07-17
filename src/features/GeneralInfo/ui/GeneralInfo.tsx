@@ -40,6 +40,7 @@ export const GeneralInfo = () => {
           className={errors.nickname ? 'error' : ''}
         />
       </FormControl>
+
       <FormControl
         id="field-name"
         label={t('enums:labels.name')}
@@ -55,6 +56,7 @@ export const GeneralInfo = () => {
           className={errors.name ? 'error' : ''}
         />
       </FormControl>
+
       <FormControl
         id="field-surname"
         label={t('enums:labels.surname')}
@@ -70,6 +72,7 @@ export const GeneralInfo = () => {
           className={errors.surname ? 'error' : ''}
         />
       </FormControl>
+      
       <FormControl
         id="field-sex"
         label={t('enums:labels.sex')}

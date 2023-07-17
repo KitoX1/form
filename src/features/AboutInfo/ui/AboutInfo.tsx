@@ -6,10 +6,7 @@ import { Textarea } from 'shared/ui/components/Textarea/Textarea';
 import { FormControl } from 'widgets/FormControl';
 
 export const AboutInfo = () => {
-  const {
-    register,
-    formState: { errors }
-  } = useFormContext<FormDataValidation>();
+  const { register, formState: { errors } } = useFormContext<FormDataValidation>();
 
   const [t] = useTranslation();
 

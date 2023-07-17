@@ -46,10 +46,12 @@ export const MainPage = () => {
   return (
     <div className={cls.pageWrapper}>
       <MainPageHeader onOpenMenu={setOpenedMenu} />
+      
       <div className={cls.pageContent}>
         <FormProvider {...methods}>
           <ContactInfo />
         </FormProvider>
+
         <Button
           id="button-start"
           element={TypeElement.BUTTON}
@@ -62,6 +64,7 @@ export const MainPage = () => {
           {t('enums:links.start')}
         </Button>
       </div>
+
       <Menu
         isOpened={isOpenedMenu}
         onClose={() => setOpenedMenu(false)}

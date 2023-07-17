@@ -38,6 +38,7 @@ export const Step = ({
     >
       <div className={cls.circle}>{isPrevious && <TikIcon />}</div>
     </Button>
+    
     {label !== undefined && <div className={cls.stepLabel}>{label}</div>}
   </div>
 );

@@ -1,4 +1,4 @@
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -7,7 +7,9 @@ import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { ThemeProvider } from 'app/providers/ThemeProviders';
 import { store } from 'app/store';
 
-render(
+const root = createRoot(document.getElementById('root') as HTMLDivElement);
+
+root.render(
   <Provider store={store}>
     <BrowserRouter>
       <ThemeProvider>
@@ -16,6 +18,5 @@ render(
         </ErrorBoundary>
       </ThemeProvider>
     </BrowserRouter>
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );

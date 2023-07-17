@@ -26,7 +26,8 @@ export const AdvantagesInfo = () => {
   return (
     <div className={cls.formControlWrapper}>
       <div className={cls.advantagesWrapper}>
-        {fields.length === 0 && <span>{t('enums:labels.advantages')}</span>}
+        {Boolean(fields.length) && <span>{t('enums:labels.advantages')}</span>}
+
         {fields.map((advantage, index) => (
           <AdvantagesField
             key={advantage.id}
@@ -34,6 +35,7 @@ export const AdvantagesInfo = () => {
             onRemove={onRemove}
           />
         ))}
+
         <Button
           id="button-add"
           element={TypeElement.BUTTON}
@@ -45,6 +47,7 @@ export const AdvantagesInfo = () => {
       </div>
 
       <CheckboxGroup />
+      
       <RadioGroup />
     </div>
   );
